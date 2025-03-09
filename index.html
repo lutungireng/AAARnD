@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAARnD - Showcasing Innovation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">AAARnD</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Showcasing Innovation and Research in Field Studies</h1>
+            <a href="#projects" class="cta-button">Explore Our Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About AAARnD</h2>
+            <p>AAARnD is a platform dedicated to developing the results of observation, research, and service through Field Study projects. Our mission is to showcase innovation and foster collaboration.</p>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section id="slider" class="slider">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="slider-item active" data-color="#C91629">
+                    <img src="images/slide1.jpg" alt="Slide 1">
+                </div>
+                <div class="slider-item" data-color="#026536">
+                    <img src="images/slide2.jpg" alt="Slide 2">
+                </div>
+                <div class="slider-item" data-color="#DD2C99">
+                    <img src="images/slide3.jpg" alt="Slide 3">
+                </div>
+                <div class="slider-item" data-color="#F94C10">
+                    <img src="images/slide4.jpg" alt="Slide 4">
+                </div>
+                <div class="slider-item" data-color="#2658F7">
+                    <img src="images/slide5.jpg" alt="Slide 5">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button type="button" class="slider-button slick-prev" aria-label="Previous" role="button">
+                    <i class="fas fa-chevron-left"></i> <!-- Changed to arrow icon -->
+
+                </button>
+                <button type="button" class="slider-button slick-next" aria-label="Next" role="button">
+                    <i class="fas fa-chevron-right"></i> <!-- Changed to arrow icon -->
+
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>AAARnD Talks</h3>
+                    <p>AAARnD Talks is a platform for discussing the past, present, and future of Nusantara.</p>
+                </div>
+                <div class="project-item">
+                    <h3>AAARnD Exhibition</h3>
+                    <p>AAARnD Exhibition showcases the past and present, focusing on archives and future design ideas.</p>
+                </div>
+                <div class="project-item">
+                    <h3>AAARnD Award</h3>
+                    <p>AAARnD Award evaluates perspectives on future design ideas developed during field study projects.</p>
+                </div> <!-- Closing tag added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3>Talk Show: Innovation in Field Studies</h3>
+                    <p>Date: July 11, 2025</p>
+                </div>
+                <div class="event-item">
+                    <h3>Exhibition: Showcasing Research</h3>
+                    <p>Date: July 12, 2025</p>
+                </div>
+                <div class="event-item">
+                    <h3>Awarding: Showcasing Research</h3>
+                    <p>Date: July 13, 2025</p>
+                <!-- Add more events here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: #C91629; color: white; padding: 10px; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AAARnD. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/kklars_ums?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</html>
