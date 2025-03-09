@@ -19,6 +19,9 @@ header {
     color: white;
     padding: 20px 0;
     transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
@@ -30,7 +33,6 @@ header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
 }
 
 header nav ul li {
@@ -138,8 +140,8 @@ header nav ul li a {
 
 .project-grid {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .project-item {
@@ -148,7 +150,7 @@ header nav ul li a {
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    width: 30%;
+    width: calc(33% - 20px); /* Adjust width for 3 items in a row */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -164,6 +166,9 @@ header nav ul li a {
 
 .event-list {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .event-item {
@@ -184,6 +189,9 @@ header nav ul li a {
 .contact form {
     max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact input, .contact textarea {
@@ -213,6 +221,12 @@ footer {
     transition: background-color 0.5s ease;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .social-links a {
     color: white;
     margin: 0 10px;
@@ -221,11 +235,47 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
     .project-item {
-        width: 100%;
+        width: calc(50% - 20px); /* Adjust width for 2 items in a row */
     }
 
     .slider-controls {
         top: 110%;
+    }
+
+    .event-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .slider-controls {
+        top: 115%;
+    }
+
+    .contact form {
+        width: 90%;
     }
 }
