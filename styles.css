@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #C91629; /* Default color */
+    color: white;
+    padding: 20px 0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+.cta-button {
+    background-color: white;
+    color: #C91629;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Slider Section */
+.slider {
+    padding: 50px 0;
+    background-color: #C91629; /* Default color */
+    transition: background-color 0.5s ease;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: left 0.5s ease, opacity 0.5s ease;
+}
+
+.slider-item.active {
+    left: 0;
+    opacity: 1;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    position: absolute; /* Keep it absolute */
+    top: 105%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    width: 80%; /* Full width to allow spacing */
+}
+
+.slider-button.slick-prev {
+    position: absolute; /* Positioning for previous button */
+    left: 10px; /* Adjusted to position on the left */
+}
+
+.slider-button.slick-next {
+    position: absolute; /* Positioning for next button */
+    right: 10px; /* Adjusted to position on the right */
+}
+
+.slider-button {
+    -webkit-text-size-adjust: 100%;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    appearance: none; /* Changed to standard appearance */
+    font-family: inherit;
+    z-index: 1;
+    height: 50px; /* Adjusted height for minimalistic design */
+    width: 50px; /* Adjusted width for minimalistic design */
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8); /* Changed to a lighter background for modern look */
+    color: none; /* Set default text color to match theme */
+    border-radius: 50%; /* Made buttons circular */
+    border: none;
+    outline: none;
+    opacity: 0.4; /* Adjusted opacity for better visibility */
+    transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.slider-button:hover {
+    color: none; /* Change to match the theme color on hover */
+    opacity: 1; /* Change opacity on hover for better visibility */
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+}
+
+/* Events Section */
+.events {
+    padding: 50px 0;
+}
+
+.event-list {
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #C91629;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Smooth transition for Send Message button */
+}
+
+#back-to-top {
+    transition: background-color 0.5s ease; /* Smooth transition for Back to Top arrow box */
+}
+
+/* Footer */
+footer {
+    background-color: #C91629; /* Default color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
