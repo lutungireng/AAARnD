@@ -4,59 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Stack navigation items */
-        align-items: center; /* Center items */
-    }
-
-    header nav ul li {
-        margin: 10px 0; /* Add margin for spacing */
-    }
-
-    .project-item {
-        width: 90%; /* Full width on smaller screens */
-        margin: 10px auto; /* Center the project items */
-    }
-
-    .slider-controls {
-        top: 80%; /* Adjust position for smaller screens */
-    }
-
-    .slider-button {
-        height: 40px; /* Smaller button size */
-        width: 40px; /* Smaller button size */
-    }
-}
-
-/* For very small screens */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 24px; /* Smaller font size for hero text */
-    }
-
-    .cta-button {
-        padding: 8px 16px; /* Adjust button size */
-    }
-
-    .contact input, .contact textarea {
-        padding: 8px; /* Adjust padding for inputs */
-    }
-}
-
-/* Hide scrollbar for Chrome, Safari, and Opera */
-body::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge, and Firefox */
-body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
 }
 
 .container {
@@ -67,9 +15,10 @@ body {
 
 /* Header */
 header {
-    background-color: #C91629; /* Default color */
+    background-color: #C91629;
     color: white;
     padding: 20px 0;
+    transition: background-color 0.5s ease;
 }
 
 header .logo {
@@ -80,10 +29,11 @@ header .logo {
 header nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -100,7 +50,8 @@ header nav ul li a {
 }
 
 .hero h1 {
-    transition: color 0.5s ease; /* Smooth color transition */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .cta-button {
@@ -109,6 +60,7 @@ header nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 /* About Section */
@@ -120,7 +72,7 @@ header nav ul li a {
 /* Slider Section */
 .slider {
     padding: 50px 0;
-    background-color: #C91629; /* Default color */
+    background-color: #C91629;
     transition: background-color 0.5s ease;
 }
 
@@ -149,57 +101,33 @@ header nav ul li a {
 
 .slider-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 100%;
+    object-fit: cover;
 }
 
 .slider-controls {
-    position: absolute; /* Keep it absolute */
-    top: 105%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for centering */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between buttons */
-    width: 80%; /* Full width to allow spacing */
-}
-
-.slider-button.slick-prev {
-    position: absolute; /* Positioning for previous button */
-    left: 10px; /* Adjusted to position on the left */
-}
-
-.slider-button.slick-next {
-    position: absolute; /* Positioning for next button */
-    right: 10px; /* Adjusted to position on the right */
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .slider-button {
-    -webkit-text-size-adjust: 100%;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    font: inherit;
-    margin: 0;
-    overflow: visible;
-    text-transform: none;
-    appearance: none; /* Changed to standard appearance */
-    font-family: inherit;
-    z-index: 1;
-    height: 50px; /* Adjusted height for minimalistic design */
-    width: 50px; /* Adjusted width for minimalistic design */
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.8); /* Changed to a lighter background for modern look */
-    color: none; /* Set default text color to match theme */
-    border-radius: 50%; /* Made buttons circular */
+    background: rgba(255, 255, 255, 0.8);
     border: none;
-    outline: none;
-    opacity: 0.4; /* Adjusted opacity for better visibility */
-    transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
 }
 
 .slider-button:hover {
-    color: none; /* Change to match the theme color on hover */
-    opacity: 1; /* Change opacity on hover for better visibility */
+    opacity: 1;
 }
 
 /* Projects Section */
@@ -221,6 +149,12 @@ header nav ul li a {
     padding: 20px;
     margin: 10px;
     width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
 }
 
 /* Events Section */
@@ -230,6 +164,15 @@ header nav ul li a {
 
 .event-list {
     text-align: center;
+}
+
+.event-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Section */
@@ -258,23 +201,31 @@ header nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s ease; /* Smooth transition for Send Message button */
-}
-
-#back-to-top {
-    transition: background-color 0.5s ease; /* Smooth transition for Back to Top arrow box */
+    transition: background-color 0.5s ease;
 }
 
 /* Footer */
 footer {
-    background-color: #C91629; /* Default color */
+    background-color: #C91629;
     color: white;
     text-align: center;
     padding: 20px 0;
+    transition: background-color 0.5s ease;
 }
 
 .social-links a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-item {
+        width: 100%;
+    }
+
+    .slider-controls {
+        top: 110%;
+    }
 }
